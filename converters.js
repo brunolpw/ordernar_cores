@@ -27,37 +27,37 @@ function formatRgb (color) {
 
 function rgbToHsl (r, g, b) {
     r /= 255;
-	g /= 255;
-	b /= 255;
-	
-	let min = Math.min(r, g, b);
-	let max = Math.max(r, g, b);
-	let delta = max - min;
-	let h = 0; // Hue        (Matiz)
-	let s = 0; // Saturation (Saturação)
-	let l = 0; // Lightness  (Brilho)
+    g /= 255;
+    b /= 255;
+    
+    let min = Math.min(r, g, b);
+    let max = Math.max(r, g, b);
+    let delta = max - min;
+    let h = 0; // Hue        (Matiz)
+    let s = 0; // Saturation (Saturação)
+    let l = 0; // Lightness  (Brilho)
 	
     // calcula h
-	if (delta === 0)    { h = 0; }
+    if (delta === 0)    { h = 0; }
     else if (max === r) { h = ((g - b) / delta) % 6; }
     else if (max === g) { h = (b - r) / delta + 2; }
     else                { h = (r - g) / delta + 4; }
-	
-	h = Math.round(h * 60);
-	if (h < 0) { h += 360; }
-	
+    
+    h = Math.round(h * 60);
+    if (h < 0) { h += 360; }
+    
     // calcula l
-	l = (max + min) / 2;
+    l = (max + min) / 2;
     
     // calcula s
-	s = delta === 0 
+    s = delta === 0 
         ? 0 
         : delta / (1 - Math.abs(2 * l - 1));
-	
-	s = +(s * 100).toFixed(1);
+    
+    s = +(s * 100).toFixed(1);
     l = +(l * 100).toFixed(1);
-	
-	return [h, s, l];
+    
+    return [h, s, l];
 }
 
 /* ******************************************************************************* */
