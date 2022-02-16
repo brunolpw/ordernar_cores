@@ -5,7 +5,7 @@ Referencia:
     https://www.maujor.com/tutorial/css3-modulo-para-cores.php
 */
 
-function hexToRgb (color) {
+function hexToRgb(color) {
     color = color.replace('#', '');
     const red = parseInt(color.substr(0, 2), 16);
     const green = parseInt(color.substr(2, 2), 16);
@@ -14,7 +14,7 @@ function hexToRgb (color) {
     return [red, green, blue];
 }
 
-function formatRgb (color) {
+function formatRgb(color) {
     color = color.replace(/[rgba()]/gi, '');
     color = color.split(',');
 
@@ -25,7 +25,7 @@ function formatRgb (color) {
     return [red, green, blue];
 }
 
-function rgbToHsl (r, g, b) {
+function rgbToHsl(r, g, b) {
     r /= 255;
     g /= 255;
     b /= 255;
