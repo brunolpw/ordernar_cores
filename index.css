@@ -1,0 +1,35 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    min-height: 350px;
+  }
+  
+  button{
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+    margin: 0 8px;
+    cursor: pointer;
+    background-color: #0062AC;
+    color: white;
+  }
+  
+  .buttons{
+    position: sticky;
+    top: 0;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .colors{
+    margin: 16px 0 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    list-style: none;
+  }
+  .color{
+    height: 30px;
+    background-color: var(--color);
+  }
