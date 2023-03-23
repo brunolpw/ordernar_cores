@@ -62,9 +62,9 @@ function rgbToHsl(r, g, b) {
 
 /* ******************************************************************************* */
 /*
-vermelho = 0
-laranja  = 
-amarelo  = 60
+vermelho = 10
+laranja  = 11~39
+amarelo  = 40~60
 verde    = 120
 ciano    = 180
 azul     = 240
@@ -72,18 +72,3 @@ roxo     =
 magenta  = 300
 vermelho = 360
 */
-
-let colors = [
-    "#fbb735", "#e98931", "#eb403b", "#b32E37", "#6c2a6a",
-    "#5c4399", "#274389", "#1f5ea8", "#227FB0", "#2ab0c5",
-    "#39c0b3"
-];
-
-colors = colors.map(color => {
-	color = hexToRgb(color);
-	return rgbToHsl(...color);
-});
-
-colors.sort((a, b) => a[0] - b[0] > 0 ? 1 : -1 );
-
-console.log(colors);
